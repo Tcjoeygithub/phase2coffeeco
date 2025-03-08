@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Phase 2 Coffee Co for mobile coffee catering services in Kansas City. Book our coffee cart for your wedding, corporate event, or special occasion.">
+    <title>Contact Us | Phase 2 Coffee Co | Mobile Coffee Cart Kansas City</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        .contact-section {
+            padding: 60px 0;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+        }
+        .contact-info {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        .contact-info h2 {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .contact-icon {
+            font-size: 24px;
+            color: var(--primary-color);
+            margin-right: 15px;
+            min-width: 30px;
+            text-align: center;
+        }
+        .contact-text h3 {
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+        .contact-text p {
+            margin: 0;
+            color: #555;
+        }
+        .booking-form-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        .booking-form-container h2 {
+            text-align: left;
+        }
+        .service-area-footer {
+            padding: 60px 0;
+            background-color: #f9f5f0;
+        }
+        .service-area-footer h2 {
+            margin-bottom: 20px;
+        }
+        .service-area-footer p {
+            margin-bottom: 30px;
+            max-width: 800px;
+        }
+        .map-container {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            iframe {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="phase2coffeecologo.avif" alt="Phase 2 Coffee Co Logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="meet-the-team.html">Meet the Team</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="tel:8167149904" class="call-button">
+                📞 (816) 714-9904
+            </a>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="container">
+            <h1>Book Your Event</h1>
+            <p>Contact us to bring premium coffee catering to your next event</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <p>Contact us about your event using this form or by giving us a call. We're excited to bring our mobile coffee cart to your next gathering!</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                📞
+                            </div>
+                            <div class="contact-text">
+                                <h3>Phone</h3>
+                                <p>(816) 714-9904</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                ✉️
+                            </div>
+                            <div class="contact-text">
+                                <h3>Email</h3>
+                                <p>info@phase2coffeeco.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                📍
+                            </div>
+                            <div class="contact-text">
+                                <h3>Location</h3>
+                                <p>Kansas City, MO</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="booking-form-container">
+                    <h2>Get a Fast & Free Mobile Espresso Quote</h2>
+                    <p>Fill out the form below for a fast, free quote on our premium coffee catering services. We offer espresso, lattes, cappuccinos, americanos, mochas, and specialty drinks customized for your Kansas City event.</p>
+                    <form id="booking-form-contact" class="booking-form" action="thank-you.html" method="get">
+                        <div class="form-group">
+                            <input type="text" id="name-contact" name="name" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone-contact" name="phone" placeholder="Phone" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email-contact" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="event-type-contact" name="event-type" placeholder="Type of Event" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" id="event-date-contact" name="event-date" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="event-location-contact" name="event-location" placeholder="Event Location" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="guest-count-contact" name="guest-count" placeholder="Guest Count" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="event-time-contact" name="event-time" placeholder="Preferred Time" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message-contact" name="message" placeholder="Message/Additional requests"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-submit">GET FREE QUOTE</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-area-footer">
+        <div class="container">
+            <h2>Our Service Area</h2>
+            <p style="white-space: normal; word-wrap: break-word; display: block; margin-left: auto; margin-right: auto;">We proudly serve the entire Kansas City metro area and surrounding regions with our mobile coffee catering services.</p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d396523.99410991324!2d-94.86732308984378!3d39.064475885986226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bdb75883c6e401%3A0xfca6a028c3bb31b8!2sPhase%202%20Coffee%20Co.!5e0!3m2!1sen!2sus!4v1741455400860!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="phase2coffeecologo.avif" alt="Phase 2 Coffee Co Logo">
+                    <p>Bringing premium coffee experiences to events across Kansas City.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="meet-the-team.html">Meet the Team</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone"></i> (816) 714-9904</p>
+                    <p><i class="fas fa-envelope"></i> info@phase2coffeeco.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Kansas City, MO</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Phase 2 Coffee Co. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
