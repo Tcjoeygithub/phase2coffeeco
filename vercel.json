@@ -1,0 +1,14 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/about-us", "destination": "/about-us.html" },
+    { "source": "/meet-the-team", "destination": "/meet-the-team.html" },
+    { "source": "/testimonials", "destination": "/testimonials.html" },
+    { "source": "/gallery", "destination": "/gallery.html" },
+    { "source": "/services", "destination": "/services.html" },
+    { "source": "/faq", "destination": "/faq.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/", "destination": "/index.html" }
+  ]
+} 
