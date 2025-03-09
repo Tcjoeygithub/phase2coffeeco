@@ -124,53 +124,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
             
-            // If form is valid, submit it via API
+            // If form is valid, submit it directly (Formspark will handle the submission)
             if (isValid) {
-                const formData = new FormData(form);
-                const formObject = {};
-                
-                formData.forEach((value, key) => {
-                    formObject[key] = value;
-                });
-                
                 // Show loading indicator on button
                 const submitButton = form.querySelector('button[type="submit"]');
-                const originalButtonText = submitButton.textContent;
-                submitButton.textContent = 'Sending...';
-                submitButton.disabled = true;
-                
-                // Submit form data to our SendGrid API endpoint
-                fetch('/api/send-email', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formObject),
-                })
-                .then(response => response.json())
-                .then(data => {
-                    // Reset button
-                    submitButton.textContent = originalButtonText;
-                    submitButton.disabled = false;
+                if (submitButton) {
+                    const originalButtonText = submitButton.textContent;
+                    submitButton.textContent = 'Sending...';
+                    submitButton.disabled = true;
                     
-                    if (data.success) {
-                        // Redirect to thank you page
-                        window.location.href = form.action || 'thank-you.html';
-                    } else {
-                        console.error('Error:', data.error);
-                        // Still redirect to thank you page even if email fails
-                        window.location.href = form.action || 'thank-you.html';
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    // Reset button
-                    submitButton.textContent = originalButtonText;
-                    submitButton.disabled = false;
-                    
-                    // If API fails, fall back to regular form submission
-                    window.location.href = form.action || 'thank-you.html';
-                });
+                    // Submit the form directly - Formspark will handle it
+                    form.submit();
+                } else {
+                    // If no button found, just submit the form
+                    form.submit();
+                }
             }
         });
     });
