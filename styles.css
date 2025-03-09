@@ -291,20 +291,32 @@ nav ul li a {
 
 .form-group input,
 .form-group select,
-.form-group textarea {
+.form-group textarea,
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="number"],
+.form-group input[name="event-date"] {
     width: 100%;
     padding: 0.8rem;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-family: var(--font-primary);
+    font-size: 1rem;
     transition: var(--transition);
 }
 
 .form-group input:focus,
 .form-group select:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group input[type="number"]:focus,
+.form-group input[name="event-date"]:focus {
     outline: none;
     border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(212, 167, 106, 0.2);
 }
 
 .form-group textarea {
@@ -1725,29 +1737,26 @@ nav a:hover, .footer-links a:hover, .mobile-menu a:hover {
     text-decoration: none;
 }
 
-/* Ensure date fields display properly on mobile */
-input[name="event-date"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: white;
-    font-size: 1rem;
-    padding: 0.8rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 100%;
-    font-family: var(--font-primary);
-}
-
-input[name="event-date"]:focus {
-    outline: none;
-    border-color: var(--secondary-color);
-    box-shadow: 0 0 0 2px rgba(212, 167, 106, 0.2);
-}
-
 /* Mobile-specific adjustments */
+/* This section is now redundant
 @media (max-width: 576px) {
     input[name="event-date"] {
+        font-size: 16px;
+        padding: 0.7rem;
+    }
+}
+*/
+
+/* Mobile-specific adjustments for all form inputs */
+@media (max-width: 576px) {
+    .form-group input,
+    .form-group select,
+    .form-group textarea,
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"],
+    .form-group input[type="number"],
+    .form-group input[name="event-date"] {
         font-size: 16px; /* Prevents iOS zoom on focus */
         padding: 0.7rem;
     }
