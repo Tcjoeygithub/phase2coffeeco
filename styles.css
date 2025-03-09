@@ -7,7 +7,7 @@
     --light-color: #f9f5f0;
     --success-color: #28a745;
     --danger-color: #dc3545;
-    --link-color-main: #5b3c11;
+    --link-color-main: #0066cc;
     --link-color-services: #6b4c21;
     --link-color-about: #7b5c31;
     --link-color-gallery: #8b6c41;
@@ -47,7 +47,8 @@ a {
 }
 
 a:hover {
-    color: var(--secondary-color);
+    color: #0044aa;
+    text-decoration: underline;
 }
 
 ul {
@@ -97,6 +98,7 @@ section {
     cursor: pointer;
     transition: var(--transition);
     border: none;
+    text-decoration: none;
 }
 
 .btn-primary {
@@ -107,6 +109,7 @@ section {
 .btn-primary:hover {
     background-color: #4a3009;
     color: white;
+    text-decoration: none;
 }
 
 .btn-secondary {
@@ -117,6 +120,7 @@ section {
 .btn-secondary:hover {
     background-color: #c39659;
     color: var(--dark-color);
+    text-decoration: none;
 }
 
 .btn-submit {
@@ -136,12 +140,14 @@ section {
     margin: 1rem auto 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 100%;
+    text-decoration: none;
 }
 
 .btn-submit:hover {
     background-color: #4a3009;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
 }
 
 /* Header Styles */
@@ -1128,6 +1134,7 @@ nav ul li a.active {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     color: white;
+    text-decoration: none;
 }
 
 /* Additional Responsive Styles */
@@ -1675,4 +1682,45 @@ nav ul li a.active {
 .faq-section a:hover, .faq-item a:hover, .faq-grid a:hover,
 .contact-section a:hover, .contact-info a:hover, .contact-grid a:hover {
     color: var(--secondary-color);
+}
+
+/* Content links - make them clearly blue */
+p a, li a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .content a {
+    color: #0066cc;
+    font-weight: 500;
+}
+
+p a:hover, li a:hover, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, .content a:hover {
+    color: #0044aa;
+    text-decoration: underline;
+}
+
+/* Button links - ensure they stand out */
+.btn-primary a {
+    color: white !important;
+    text-decoration: none !important;
+    font-weight: 600;
+}
+
+.btn-secondary a {
+    color: var(--dark-color) !important;
+    text-decoration: none !important;
+    font-weight: 600;
+}
+
+.btn-submit a {
+    color: white !important;
+    text-decoration: none !important;
+    font-weight: 600;
+}
+
+/* Navigation links - keep them in the original brown */
+nav a, .footer-links a, .mobile-menu a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+nav a:hover, .footer-links a:hover, .mobile-menu a:hover {
+    color: var(--secondary-color);
+    text-decoration: none;
 } 
