@@ -1,6 +1,6 @@
 const sgMail = require('@sendgrid/mail');
 
-export default async function handler(req, res) {
+module.exports = async (req, res) => {
   // Only allow POST requests
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -26,7 +26,7 @@ export default async function handler(req, res) {
     // Create email message
     const msg = {
       to: ['leadbros@protonmail.com', 'Phase2coffee@gmail.com'],
-      from: 'VERIFIED_SENDER_EMAIL', // ← REPLACE WITH YOUR VERIFIED SENDER EMAIL
+      from: process.env.SENDGRID_SENDER_EMAIL,
       subject: `New Coffee Catering Quote Request from ${name}`,
       text: `
         Name: ${name}
@@ -67,4 +67,4 @@ export default async function handler(req, res) {
       details: error.message 
     });
   }
-} 
+}; 
