@@ -7,6 +7,14 @@
     --light-color: #f9f5f0;
     --success-color: #28a745;
     --danger-color: #dc3545;
+    --link-color-main: #5b3c11;
+    --link-color-services: #6b4c21;
+    --link-color-about: #7b5c31;
+    --link-color-gallery: #8b6c41;
+    --link-color-team: #9b7c51;
+    --link-color-testimonials: #ab8c61;
+    --link-color-faq: #bb9c71;
+    --link-color-contact: #cb9c61;
     --font-primary: 'Poppins', sans-serif;
     --transition: all 0.3s ease;
     --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -34,7 +42,7 @@ body {
 
 a {
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--link-color-main);
     transition: var(--transition);
 }
 
@@ -1627,4 +1635,44 @@ nav ul li a.active {
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+/* Section-specific link colors */
+.services a, .service-card a, .service-item a {
+    color: var(--link-color-services);
+}
+
+.about-section a, .about-content a, .about-us a {
+    color: var(--link-color-about);
+}
+
+.gallery-preview a, .gallery-grid a, .gallery-item a, .gallery-container a {
+    color: var(--link-color-gallery);
+}
+
+.team-section a, .team-card a, .team-intro a, .team-gallery a {
+    color: var(--link-color-team);
+}
+
+.testimonials-preview a, .testimonial a, .testimonials-section a {
+    color: var(--link-color-testimonials);
+}
+
+.faq-section a, .faq-item a, .faq-grid a {
+    color: var(--link-color-faq);
+}
+
+.contact-section a, .contact-info a, .contact-grid a {
+    color: var(--link-color-contact);
+}
+
+/* Ensure all hover states are consistent */
+.services a:hover, .service-card a:hover, .service-item a:hover,
+.about-section a:hover, .about-content a:hover, .about-us a:hover,
+.gallery-preview a:hover, .gallery-grid a:hover, .gallery-item a:hover, .gallery-container a:hover,
+.team-section a:hover, .team-card a:hover, .team-intro a:hover, .team-gallery a:hover,
+.testimonials-preview a:hover, .testimonial a:hover, .testimonials-section a:hover,
+.faq-section a:hover, .faq-item a:hover, .faq-grid a:hover,
+.contact-section a:hover, .contact-info a:hover, .contact-grid a:hover {
+    color: var(--secondary-color);
 } 
