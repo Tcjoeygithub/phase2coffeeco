@@ -23,14 +23,38 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const mobileMenuClose = document.querySelector('.mobile-menu-close');
     
-    mobileMenuBtn.addEventListener('click', function() {
-        mobileMenu.classList.add('active');
-        document.body.style.overflow = 'hidden';
+    // Function to toggle mobile menu
+    function toggleMobileMenu() {
+        mobileMenu.classList.toggle('active');
+        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
+    }
+    
+    // Open mobile menu
+    mobileMenuBtn.addEventListener('click', function(e) {
+        e.stopPropagation(); // Prevent event from bubbling up
+        toggleMobileMenu();
     });
     
-    mobileMenuClose.addEventListener('click', function() {
-        mobileMenu.classList.remove('active');
-        document.body.style.overflow = 'auto';
+    // Close mobile menu when clicking the close button
+    mobileMenuClose.addEventListener('click', function(e) {
+        e.stopPropagation(); // Prevent event from bubbling up
+        toggleMobileMenu();
+    });
+    
+    // Close mobile menu when clicking on a menu item
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function() {
+            toggleMobileMenu();
+        });
+    });
+    
+    // Close mobile menu when clicking outside of it
+    document.addEventListener('click', function(e) {
+        if (mobileMenu.classList.contains('active') && 
+            !mobileMenu.contains(e.target) && 
+            e.target !== mobileMenuBtn) {
+            toggleMobileMenu();
+        }
     });
     
     // Form Validation and Submission
