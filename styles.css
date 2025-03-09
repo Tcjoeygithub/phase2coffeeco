@@ -1723,4 +1723,32 @@ nav a, .footer-links a, .mobile-menu a {
 nav a:hover, .footer-links a:hover, .mobile-menu a:hover {
     color: var(--secondary-color);
     text-decoration: none;
+}
+
+/* Ensure date fields display properly on mobile */
+input[name="event-date"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: white;
+    font-size: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    font-family: var(--font-primary);
+}
+
+input[name="event-date"]:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(212, 167, 106, 0.2);
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 576px) {
+    input[name="event-date"] {
+        font-size: 16px; /* Prevents iOS zoom on focus */
+        padding: 0.7rem;
+    }
 } 
