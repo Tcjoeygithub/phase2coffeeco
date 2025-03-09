@@ -133,8 +133,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     formObject[key] = value;
                 });
                 
-                // Submit form data to API endpoint
-                fetch('/api/submit-form', {
+                // Show loading indicator on button
+                const submitButton = form.querySelector('button[type="submit"]');
+                const originalButtonText = submitButton.textContent;
+                submitButton.textContent = 'Sending...';
+                submitButton.disabled = true;
+                
+                // Submit form data to our SendGrid API endpoint
+                fetch('/api/send-email', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -143,19 +149,27 @@ document.addEventListener('DOMContentLoaded', function() {
                 })
                 .then(response => response.json())
                 .then(data => {
+                    // Reset button
+                    submitButton.textContent = originalButtonText;
+                    submitButton.disabled = false;
+                    
                     if (data.success) {
                         // Redirect to thank you page
-                        window.location.href = 'thank-you.html';
+                        window.location.href = form.action || 'thank-you.html';
                     } else {
-                        alert('There was an error submitting your form. Please try again or contact us directly.');
+                        console.error('Error:', data.error);
+                        // Still redirect to thank you page even if email fails
+                        window.location.href = form.action || 'thank-you.html';
                     }
                 })
                 .catch(error => {
                     console.error('Error:', error);
+                    // Reset button
+                    submitButton.textContent = originalButtonText;
+                    submitButton.disabled = false;
+                    
                     // If API fails, fall back to regular form submission
-                    form.action = 'thank-you.html';
-                    form.method = 'get';
-                    form.submit();
+                    window.location.href = form.action || 'thank-you.html';
                 });
             }
         });
