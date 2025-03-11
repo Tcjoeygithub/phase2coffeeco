@@ -17,7 +17,7 @@
         }
         .contact-grid {
             display: grid;
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: 2fr 1fr;
             gap: 40px;
         }
         .contact-info {
@@ -82,6 +82,12 @@
             .contact-grid {
                 grid-template-columns: 1fr;
             }
+            .contact-grid > div:first-child {
+                order: 1;
+            }
+            .contact-grid > div:last-child {
+                order: 2;
+            }
             iframe {
                 height: 350px;
             }
@@ -92,20 +98,20 @@
     <header>
         <div class="container">
             <div class="logo">
-                <a href="index.html">
+                <a href="index">
                     <img src="phase2coffeecologo.avif" alt="Phase 2 Coffee Co Logo">
                 </a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="meet-the-team.html">Meet the Team</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="index">Home</a></li>
+                    <li><a href="services">Services</a></li>
+                    <li><a href="gallery">Gallery</a></li>
+                    <li><a href="about-us">About Us</a></li>
+                    <li><a href="meet-the-team">Meet the Team</a></li>
+                    <li><a href="testimonials">Testimonials</a></li>
+                    <li><a href="faq">FAQ</a></li>
+                    <li><a href="contact" class="active">Contact</a></li>
                 </ul>
             </nav>
             <a href="tel:8167149904" class="call-button">
@@ -129,44 +135,11 @@
     <section class="contact-section">
         <div class="container">
             <div class="contact-grid">
-                <div class="contact-info">
-                    <h2>Contact Information</h2>
-                    <p>Contact us about your event using this form or by giving us a call. We're excited to bring our mobile coffee cart to your next gathering! For more information about our <a href="index.html">premium coffee catering in Kansas City</a>, visit our homepage.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                📞
-                            </div>
-                            <div class="contact-text">
-                                <h3>Phone</h3>
-                                <p>(816) 714-9904</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                ✉️
-                            </div>
-                            <div class="contact-text">
-                                <h3>Email</h3>
-                                <p>info@phase2coffeeco.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                📍
-                            </div>
-                            <div class="contact-text">
-                                <h3>Location</h3>
-                                <p>Kansas City, MO</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="booking-form-container">
                     <h2>Get a Fast & Free Mobile Espresso Quote</h2>
                     <p>Fill out the form below for a fast, free quote on our premium coffee catering services. We offer espresso, lattes, cappuccinos, americanos, mochas, and specialty drinks customized for your Kansas City event.</p>
                     <form id="booking-form-contact" class="booking-form" action="https://submit-form.com/bGO0YKyJ3" method="post">
-                    <input type="hidden" name="_redirect" value="https://phase2coffeeco.vercel.app/thank-you.html" />
+                    <input type="hidden" name="_redirect" value="https://phase2coffeeco.vercel.app/thank-you" />
                         <div class="form-group">
                             <input type="text" id="name-contact" name="name" placeholder="Name" required>
                         </div>
@@ -199,6 +172,39 @@
                         </div>
                     </form>
                 </div>
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <p>Contact us about your event using this form or by giving us a call. We're excited to bring our mobile coffee cart to your next gathering! For more information about our <a href="index">premium coffee catering in Kansas City</a>, visit our homepage.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                📞
+                            </div>
+                            <div class="contact-text">
+                                <h3>Phone</h3>
+                                <p>(816) 714-9904</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                ✉️
+                            </div>
+                            <div class="contact-text">
+                                <h3>Email</h3>
+                                <p>info@phase2coffeeco.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                📍
+                            </div>
+                            <div class="contact-text">
+                                <h3>Location</h3>
+                                <p>Kansas City, MO</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -223,14 +229,14 @@
                 <div class="footer-links">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="about-us.html">About Us</a></li>
-                        <li><a href="meet-the-team.html">Meet the Team</a></li>
-                        <li><a href="testimonials.html">Testimonials</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index">Home</a></li>
+                        <li><a href="services">Services</a></li>
+                        <li><a href="gallery">Gallery</a></li>
+                        <li><a href="about-us">About Us</a></li>
+                        <li><a href="meet-the-team">Meet the Team</a></li>
+                        <li><a href="testimonials">Testimonials</a></li>
+                        <li><a href="faq">FAQ</a></li>
+                        <li><a href="contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">

@@ -17,7 +17,7 @@
         }
         .contact-grid {
             display: grid;
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: 2fr 1fr;
             gap: 40px;
         }
         .contact-info {
@@ -82,6 +82,12 @@
             .contact-grid {
                 grid-template-columns: 1fr;
             }
+            .contact-grid > div:first-child {
+                order: 1;
+            }
+            .contact-grid > div:last-child {
+                order: 2;
+            }
             iframe {
                 height: 350px;
             }
@@ -92,20 +98,20 @@
     <header>
         <div class="container">
             <div class="logo">
-                <a href="../index.html">
+                <a href="../index">
                     <img src="../phase2coffeecologo.avif" alt="Phase 2 Coffee Co Logo">
                 </a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="team.html">Meet the Team</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="../index">Home</a></li>
+                    <li><a href="services">Services</a></li>
+                    <li><a href="gallery">Gallery</a></li>
+                    <li><a href="about">About Us</a></li>
+                    <li><a href="team">Meet the Team</a></li>
+                    <li><a href="testimonials">Testimonials</a></li>
+                    <li><a href="faq">FAQ</a></li>
+                    <li><a href="contact" class="active">Contact</a></li>
                 </ul>
             </nav>
             <a href="tel:8167149904" class="call-button">
@@ -129,6 +135,43 @@
     <section class="contact-section">
         <div class="container">
             <div class="contact-grid">
+                <div class="booking-form-container">
+                    <h2>Get a Fast & Free Mobile Espresso Quote</h2>
+                    <p>Fill out the form below for a fast, free quote on our premium coffee catering services. We offer espresso, lattes, cappuccinos, americanos, mochas, and specialty drinks customized for your Kansas City event.</p>
+                    <form id="booking-form-contact" class="booking-form" action="https://submit-form.com/bGO0YKyJ3" method="post">
+                    <input type="hidden" name="_redirect" value="https://phase2coffeeco.vercel.app/thank-you" />
+                        <div class="form-group">
+                            <input type="text" id="name-contact" name="name" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone-contact" name="phone" placeholder="Phone" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email-contact" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="event-type-contact" name="event-type" placeholder="Type of Event" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="event-date" name="event-date" placeholder="Date of Your Event" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="event-location-contact" name="event-location" placeholder="Event Location" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="guest-count-contact" name="guest-count" placeholder="Guest Count" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="event-time-contact" name="event-time" placeholder="Preferred Time" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message-contact" name="message" placeholder="Message/Additional requests"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-submit">GET FREE QUOTE</button>
+                        </div>
+                    </form>
+                </div>
                 <div class="contact-info">
                     <h2>Contact Information</h2>
                     <p>Contact us about your event using this form or by giving us a call. We're excited to bring our mobile coffee cart to your next gathering!</p>
@@ -162,43 +205,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="booking-form-container">
-                    <h2>Get a Fast & Free Mobile Espresso Quote</h2>
-                    <p>Fill out the form below for a fast, free quote on our premium coffee catering services. We offer espresso, lattes, cappuccinos, americanos, mochas, and specialty drinks customized for your Kansas City event.</p>
-                    <form id="booking-form-contact" class="booking-form" action="https://submit-form.com/bGO0YKyJ3" method="post">
-                    <input type="hidden" name="_redirect" value="https://phase2coffeeco.vercel.app/thank-you.html" />
-                        <div class="form-group">
-                            <input type="text" id="name-contact" name="name" placeholder="Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" id="phone-contact" name="phone" placeholder="Phone" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email-contact" name="email" placeholder="Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="event-type-contact" name="event-type" placeholder="Type of Event" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="event-date" name="event-date" placeholder="Date of Your Event" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="event-location-contact" name="event-location" placeholder="Event Location" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="number" id="guest-count-contact" name="guest-count" placeholder="Guest Count" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="event-time-contact" name="event-time" placeholder="Preferred Time" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message-contact" name="message" placeholder="Message/Additional requests"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-submit">GET FREE QUOTE</button>
-                        </div>
-                    </form>
-                </div>
             </div>
         </div>
     </section>
@@ -223,14 +229,14 @@
                 <div class="footer-links">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="team.html">Meet the Team</a></li>
-                        <li><a href="testimonials.html">Testimonials</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="../index">Home</a></li>
+                        <li><a href="services">Services</a></li>
+                        <li><a href="gallery">Gallery</a></li>
+                        <li><a href="about">About Us</a></li>
+                        <li><a href="team">Meet the Team</a></li>
+                        <li><a href="testimonials">Testimonials</a></li>
+                        <li><a href="faq">FAQ</a></li>
+                        <li><a href="contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
