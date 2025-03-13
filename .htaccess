@@ -1,0 +1,17 @@
+ErrorDocument 404 /404.html
+
+# Redirects for specific pages
+Redirect 301 /mobile-coffee-cart /
+Redirect 301 /coffee-cart-catering /
+Redirect 301 /coffee-cart-for-weddings-copy /
+
+# Enable rewriting
+RewriteEngine On
+
+# Redirect to www version if accessed without www
+RewriteCond %{HTTP_HOST} ^phase2coffeeco\.com [NC]
+RewriteRule ^(.*)$ https://www.phase2coffeeco.com/$1 [L,R=301]
+
+# Redirect to HTTPS if accessed via HTTP
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301] 

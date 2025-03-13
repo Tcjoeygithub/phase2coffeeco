@@ -1,0 +1,23 @@
+[[redirects]]
+  from = "/mobile-coffee-cart"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/coffee-cart-catering"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/coffee-cart-for-weddings-copy"
+  to = "/"
+  status = 301
+  force = true
+
+# This ensures that all 404s show our custom 404 page
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404 

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Phase 2 Coffee Co</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="phase2coffeecologo.avif">
+    <script>
+        // List of redirects (path to redirect to)
+        const redirects = {
+            '/mobile-coffee-cart': '/',
+            '/coffee-cart-catering': '/',
+            '/coffee-cart-for-weddings-copy': '/'
+        };
+
+        // Get the current path
+        const path = window.location.pathname;
+        
+        // Check if this path should be redirected
+        if (redirects[path]) {
+            window.location.href = redirects[path];
+        }
+    </script>
+    <style>
+        .not-found-container {
+            text-align: center;
+            padding: 100px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .not-found-container h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .not-found-container p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .not-found-container .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #6B4B35;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        .not-found-container .btn:hover {
+            background-color: #4a3009;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index">
+                    <img src="phase2coffeecologo.avif" alt="Phase 2 Coffee Co Logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index">Home</a></li>
+                    <li><a href="services">Services</a></li>
+                    <li><a href="gallery">Gallery</a></li>
+                    <li><a href="about-us">About Us</a></li>
+                    <li><a href="meet-the-team">Meet the Team</a></li>
+                    <li><a href="testimonials">Testimonials</a></li>
+                    <li><a href="faq">FAQ</a></li>
+                    <li><a href="contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="tel:8167149904" class="call-button">
+                📞 (816) 714-9904
+            </a>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="not-found-container">
+        <h1>Page Not Found</h1>
+        <p>We're sorry, but the page you're looking for doesn't exist. You may have mistyped the address or the page may have moved.</p>
+        <p>You're being redirected to our homepage. If you're not redirected automatically, please click the button below.</p>
+        <a href="index" class="btn">Go to Homepage</a>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="phase2coffeecologo.avif" alt="Phase 2 Coffee Co Logo">
+                    <p>Bringing premium coffee experiences to events across Kansas City.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index">Home</a></li>
+                        <li><a href="services">Services</a></li>
+                        <li><a href="gallery">Gallery</a></li>
+                        <li><a href="about-us">About Us</a></li>
+                        <li><a href="meet-the-team">Meet the Team</a></li>
+                        <li><a href="testimonials">Testimonials</a></li>
+                        <li><a href="faq">FAQ</a></li>
+                        <li><a href="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone"></i> (816) 714-9904</p>
+                    <p><i class="fas fa-envelope"></i> info@phase2coffeeco.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Kansas City, MO</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Phase 2 Coffee Co. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
