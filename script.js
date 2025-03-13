@@ -61,45 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const bookingForms = document.querySelectorAll('.booking-form, .booking-form-mini');
     
     bookingForms.forEach(form => {
-        // Add reCAPTCHA v2 checkbox to each form if it doesn't already have one
-        if (!form.querySelector('.g-recaptcha')) {
-            const submitButton = form.querySelector('button[type="submit"]');
-            if (submitButton) {
-                // Create a form group for the reCAPTCHA
-                const recaptchaDiv = document.createElement('div');
-                recaptchaDiv.className = 'form-group recaptcha-container';
-                
-                // Create the reCAPTCHA element
-                const recaptchaElement = document.createElement('div');
-                recaptchaElement.className = 'g-recaptcha';
-                recaptchaElement.setAttribute('data-sitekey', '6LfI3_IqAAAAANADKJtgT4e_dRiA0JMUHtAhHDbT');
-                
-                // Create error message element
-                const errorMessage = document.createElement('div');
-                errorMessage.className = 'error-message recaptcha-error';
-                errorMessage.style.display = 'none';
-                errorMessage.textContent = 'Please complete the reCAPTCHA';
-                
-                // Append elements to the form group
-                recaptchaDiv.appendChild(recaptchaElement);
-                recaptchaDiv.appendChild(errorMessage);
-                
-                // Insert before the submit button
-                submitButton.parentNode.insertBefore(recaptchaDiv, submitButton);
-                
-                // Render the reCAPTCHA
-                if (typeof grecaptcha !== 'undefined' && grecaptcha.render) {
-                    try {
-                        grecaptcha.render(recaptchaElement, {
-                            'sitekey': '6LfI3_IqAAAAANADKJtgT4e_dRiA0JMUHtAhHDbT'
-                        });
-                    } catch (e) {
-                        console.error('Error rendering reCAPTCHA:', e);
-                    }
-                }
-            }
-        }
-        
         form.addEventListener('submit', function(e) {
             // Prevent default form submission to validate first
             e.preventDefault();
@@ -109,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
             formGroups.forEach(group => {
                 group.classList.remove('error');
                 const errorMessage = group.querySelector('.error-message');
-                if (errorMessage && errorMessage.className !== 'error-message recaptcha-error') {
+                if (errorMessage) {
                     errorMessage.remove();
                 }
             });
@@ -163,26 +124,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
             
-            // Validate reCAPTCHA
-            const recaptchaResponse = form.querySelector('[name="g-recaptcha-response"]');
-            const recaptchaContainer = form.querySelector('.recaptcha-container');
-            const recaptchaError = form.querySelector('.recaptcha-error');
-            
-            // Check if reCAPTCHA is present and not completed
-            if (recaptchaContainer && (!recaptchaResponse || !recaptchaResponse.value)) {
-                isValid = false;
-                recaptchaContainer.classList.add('error');
-                if (recaptchaError) {
-                    recaptchaError.style.display = 'block';
-                }
-                console.log('reCAPTCHA validation failed');
-            } else if (recaptchaError) {
-                recaptchaError.style.display = 'none';
-            }
-            
             // If form is valid, submit
             if (isValid) {
-                console.log('Form is valid, submitting...');
                 // Show loading indicator on button
                 const submitButton = form.querySelector('button[type="submit"]');
                 if (submitButton) {
@@ -203,8 +146,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     // If no button found, just submit the form
                     form.submit();
                 }
-            } else {
-                console.log('Form validation failed');
             }
         });
     });
