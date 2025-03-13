@@ -20,43 +20,6 @@
     --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* JotForm Custom Styles */
-.form-container iframe,
-.book-now-form iframe,
-.booking-form-container iframe {
-    width: 100% !important;
-    height: 540px !important;
-    border: none !important;
-    overflow: hidden !important;
-}
-
-.hero-form .form-container iframe {
-    height: 540px !important;
-    min-height: 540px !important;
-    max-height: 540px !important;
-}
-
-/* JotForm Responsive Styles */
-@media (max-width: 768px) {
-    .form-container iframe,
-    .book-now-form iframe,
-    .booking-form-container iframe,
-    .hero-form .form-container iframe {
-        height: 650px !important;
-        min-height: 650px !important;
-    }
-}
-
-@media (max-width: 576px) {
-    .form-container iframe,
-    .book-now-form iframe,
-    .booking-form-container iframe,
-    .hero-form .form-container iframe {
-        height: 700px !important;
-        min-height: 700px !important;
-    }
-}
-
 * {
     margin: 0;
     padding: 0;
